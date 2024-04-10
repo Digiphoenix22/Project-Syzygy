@@ -5,6 +5,7 @@ using UnityEngine;
 public class TurretController : MonoBehaviour
 {
     public Transform target;
+    public AudioSource audioSource;
     public GameObject projectile;
     public Transform spawnPos;
     public float launchSpeed;
@@ -46,6 +47,7 @@ public class TurretController : MonoBehaviour
                 {
                     {
                         Debug.Log("fired");
+                        audioSource.Play();
                         GameObject bullet = Instantiate(projectile, spawnPos.position, transform.rotation); //spawn projectile
 
                         bullet.GetComponent<Rigidbody2D>().AddForce(transform.up * launchSpeed); //addforce to projectile

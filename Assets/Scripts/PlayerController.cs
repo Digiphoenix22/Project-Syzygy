@@ -14,6 +14,13 @@ public class PlayerController : MonoBehaviour
     public float rotationSpeed = 100f;
     public float cooldownTime = 4f; // Cooldown time in seconds before the ship can launch again
 
+    public AudioClip deathSound; // Your existing death sound
+    public AudioClip alternateDeathSound; // New field for the alternate sound
+
+    public AudioSource audioSource; // SOUNDS YAY!!
+
+
+
     [SerializeField]
     int health = 1;
 
@@ -145,8 +152,29 @@ public class PlayerController : MonoBehaviour
         health -= 1;
         if (health <= 0)
         {
-            ExplodeThisGameObject();
+            // Randomly decide to play the death sound or the alternate sound
+        float chance = Random.Range(0f, 1f); // Generates a random number between 0.0 and 1.0
+        if (chance < 0.1f) // 10% chance
+        {
+            // Play the alternate death sound if it's assigned
+            if (alternateDeathSound != null)
+            {
+                audioSource.clip = alternateDeathSound;
+                audioSource.Play();
+            }
         }
+        else
+        {
+            // Play the regular death sound
+            if (deathSound != null)
+            {
+                audioSource.clip = deathSound;
+                audioSource.Play();
+            }
+        }
+        ExplodeThisGameObject();
+    }
+
 
         if (col.gameObject.tag == ("Wall"))
         {
