@@ -1478,13 +1478,33 @@ MonoBehaviour:
   dialogue:
     dialogueLines:
     - character:
-        name: Bkiib
+        name: Captain
         icon: {fileID: 995296621, guid: 25d0ff47cf00e8e4ca040575f75c0e09, type: 3}
-      line: Goob Goeadwoh GOHaiufw soadnsoiuad afiunwiufwnaf
+      line: Would you like to pilot the ship?
+      dialogueOptions:
+      - option: Yes
+        dialogueIndex: 1
+      - option: No
+        dialogueIndex: 2
+      DefaultDialogueIndex: 999
     - character:
-        name: Bkiib
+        name: Captain
         icon: {fileID: 734608279, guid: 25d0ff47cf00e8e4ca040575f75c0e09, type: 3}
-      line: FHUWAUHIIUHWFAIHUWFAIHUFWAHIUFW AWFwaF AWFwa F
+      line: Woohoo!
+      dialogueOptions: []
+      DefaultDialogueIndex: 3
+    - character:
+        name: Captain
+        icon: {fileID: -1543551381, guid: 25d0ff47cf00e8e4ca040575f75c0e09, type: 3}
+      line: You will pilot the ship.
+      dialogueOptions: []
+      DefaultDialogueIndex: 3
+    - character:
+        name: Captain
+        icon: {fileID: -1543551381, guid: 25d0ff47cf00e8e4ca040575f75c0e09, type: 3}
+      line: This chat is now over
+      dialogueOptions: []
+      DefaultDialogueIndex: 999
   activeOnStart: 1
   delayTime: 1
 --- !u!4 &497419073

@@ -2224,11 +2224,11 @@ MonoBehaviour:
   pathSprite: {fileID: 714073216}
   shipTrail: {fileID: 1530476953}
   Destinations:
-  - Earth
-  - Saturn
-  - Sun
-  - Big Red
-  - Skull
+  - Level1-1
+  - Level1-2
+  - Level1-3
+  - Level1-4
+  - Level1-5
   DestinationText: {fileID: 1942640455}
 --- !u!1 &1530476950
 GameObject:

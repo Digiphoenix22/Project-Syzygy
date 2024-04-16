@@ -13,12 +13,23 @@ public class DialogueCharacter
     public Sprite icon;
 }
 
+
+[System.Serializable]
+public class DialogueOption
+{
+    public string option;
+    public int dialogueIndex;
+}
+
 [System.Serializable]
 public class DialogueLine
 {
     public DialogueCharacter character;
     [TextArea(3, 10)]
     public string line;
+    public List<DialogueOption> dialogueOptions = new List<DialogueOption>();
+
+    public int DefaultDialogueIndex;
 }
 
 [System.Serializable]

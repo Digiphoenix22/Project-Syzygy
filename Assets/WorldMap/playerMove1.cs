@@ -8,6 +8,7 @@ using UnityEngine;
 using UnityEngine.Splines;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 //
 //
@@ -107,6 +108,7 @@ public class playerMove1 : MonoBehaviour
         string message = "Going to ";
         DestinationText.text = (message + Destinations[planetValue]);
         DestinationText.enabled = true;
+        StartCoroutine(enterLevel(Destinations[planetValue]));
     }
    }
    
@@ -183,5 +185,11 @@ public class playerMove1 : MonoBehaviour
    private void drawPath()
    {
     Instantiate(pathSprite, new Vector3(transform.position.x, transform.position.y, transform.position.z + 1), transform.rotation);
+   }
+
+   IEnumerator enterLevel(string levelName)
+   {
+    yield return new WaitForSeconds(2);
+    SceneManager.LoadScene(levelName);
    }
 }
