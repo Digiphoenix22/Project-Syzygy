@@ -1918,7 +1918,144 @@ MonoBehaviour:
     - character:
         name: BOSS
         icon: {fileID: -1543551381, guid: 25d0ff47cf00e8e4ca040575f75c0e09, type: 3}
-      line: 
+      line: So! These are your co-pilots, CAPTAIN.
+      dialogueOptions: []
+      DefaultDialogueIndex: 999
+    - character:
+        name: BOSS
+        icon: {fileID: -1543551381, guid: 25d0ff47cf00e8e4ca040575f75c0e09, type: 3}
+      line: They can fly alongside you throughout your journey across space.
+      dialogueOptions: []
+      DefaultDialogueIndex: 999
+    - character:
+        name: BOSS
+        icon: {fileID: -1543551381, guid: 25d0ff47cf00e8e4ca040575f75c0e09, type: 3}
+      line: "I think you\u2019ll all get along well!"
+      dialogueOptions: []
+      DefaultDialogueIndex: 999
+    - character:
+        name: BOSS
+        icon: {fileID: -1543551381, guid: 25d0ff47cf00e8e4ca040575f75c0e09, type: 3}
+      line: Now, let me remind you all about your mission.
+      dialogueOptions: []
+      DefaultDialogueIndex: 999
+    - character:
+        name: BOSS
+        icon: {fileID: -1543551381, guid: 25d0ff47cf00e8e4ca040575f75c0e09, type: 3}
+      line: "Your job is to find a planet that\u2019s potentially suitable for human
+        colonization."
+      dialogueOptions: []
+      DefaultDialogueIndex: 999
+    - character:
+        name: BOSS
+        icon: {fileID: -1543551381, guid: 25d0ff47cf00e8e4ca040575f75c0e09, type: 3}
+      line: You should link any colony ships you find down your route as well.
+      dialogueOptions: []
+      DefaultDialogueIndex: 999
+    - character:
+        name: BOSS
+        icon: {fileID: -1543551381, guid: 25d0ff47cf00e8e4ca040575f75c0e09, type: 3}
+      line: 'If you can find an exoplanet that can sustain life, then we can finalize
+        the project back on Earth. '
+      dialogueOptions: []
+      DefaultDialogueIndex: 999
+    - character:
+        name: BOSS
+        icon: {fileID: -1543551381, guid: 25d0ff47cf00e8e4ca040575f75c0e09, type: 3}
+      line: "And, of course, you\u2019ll all be honored for your services."
+      dialogueOptions: []
+      DefaultDialogueIndex: 999
+    - character:
+        name: BOSS
+        icon: {fileID: -1543551381, guid: 25d0ff47cf00e8e4ca040575f75c0e09, type: 3}
+      line: 'This mission is important not just for our space program, but for all
+        of humanity. '
+      dialogueOptions: []
+      DefaultDialogueIndex: 999
+    - character:
+        name: CHICO
+        icon: {fileID: -1543551381, guid: 25d0ff47cf00e8e4ca040575f75c0e09, type: 3}
+      line: Amen, BOSS!
+      dialogueOptions: []
+      DefaultDialogueIndex: 999
+    - character:
+        name: BOSS
+        icon: {fileID: -1543551381, guid: 25d0ff47cf00e8e4ca040575f75c0e09, type: 3}
+      line: "But of course \u2013 and the rest of you know this \u2013 you can choose
+        to go alone if you want, CAPTAIN."
+      dialogueOptions: []
+      DefaultDialogueIndex: 999
+    - character:
+        name: BOSS
+        icon: {fileID: -1543551381, guid: 25d0ff47cf00e8e4ca040575f75c0e09, type: 3}
+      line: "Your co-pilots can go back to base until they\u2019re needed. "
+      dialogueOptions: []
+      DefaultDialogueIndex: 999
+    - character:
+        name: CHICO
+        icon: {fileID: -1543551381, guid: 25d0ff47cf00e8e4ca040575f75c0e09, type: 3}
+      line: Yeah...
+      dialogueOptions: []
+      DefaultDialogueIndex: 999
+    - character:
+        name: HAWK
+        icon: {fileID: -1543551381, guid: 25d0ff47cf00e8e4ca040575f75c0e09, type: 3}
+      line: Fine to work when needed, CAPTAIN.
+      dialogueOptions: []
+      DefaultDialogueIndex: 999
+    - character:
+        name: GARY
+        icon: {fileID: -1543551381, guid: 25d0ff47cf00e8e4ca040575f75c0e09, type: 3}
+      line: Me as well.
+      dialogueOptions: []
+      DefaultDialogueIndex: 999
+    - character:
+        name: BOSS
+        icon: {fileID: -1543551381, guid: 25d0ff47cf00e8e4ca040575f75c0e09, type: 3}
+      line: 'So, what do you say, CAPTAIN? You want your team with you? '
+      dialogueOptions: []
+      DefaultDialogueIndex: 999
+    - character:
+        name: BOSS
+        icon: {fileID: -1543551381, guid: 25d0ff47cf00e8e4ca040575f75c0e09, type: 3}
+      line: 'All right. Then are you ready to decide our future, CAPTAIN? '
+      dialogueOptions: []
+      DefaultDialogueIndex: 999
+    - character:
+        name: HAWK
+        icon: {fileID: -1543551381, guid: 25d0ff47cf00e8e4ca040575f75c0e09, type: 3}
+      line: Yeah, CAPTAIN!
+      dialogueOptions: []
+      DefaultDialogueIndex: 999
+    - character:
+        name: CHICO
+        icon: {fileID: -1543551381, guid: 25d0ff47cf00e8e4ca040575f75c0e09, type: 3}
+      line: Whoop-whoop!
+      dialogueOptions: []
+      DefaultDialogueIndex: 999
+    - character:
+        name: GARY
+        icon: {fileID: -1543551381, guid: 25d0ff47cf00e8e4ca040575f75c0e09, type: 3}
+      line: I salute you, CAPTAIN!
+      dialogueOptions: []
+      DefaultDialogueIndex: 999
+    - character:
+        name: BOSS
+        icon: {fileID: -1543551381, guid: 25d0ff47cf00e8e4ca040575f75c0e09, type: 3}
+      line: "Great! The three of you can go, and I\u2019ll be signing off for now."
+      dialogueOptions: []
+      DefaultDialogueIndex: 999
+    - character:
+        name: BOSS
+        icon: {fileID: -1543551381, guid: 25d0ff47cf00e8e4ca040575f75c0e09, type: 3}
+      line: "If you encounter anything that\u2019s too challenging for you, CAPTAIN,
+        just phone me or your mates for help."
+      dialogueOptions: []
+      DefaultDialogueIndex: 999
+    - character:
+        name: BOSS
+        icon: {fileID: -1543551381, guid: 25d0ff47cf00e8e4ca040575f75c0e09, type: 3}
+      line: "Good luck to all of you... especially you, CAPTAIN. \r\n"
       dialogueOptions: []
       DefaultDialogueIndex: 999
   activeOnStart: 1
