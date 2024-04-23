@@ -59,7 +59,6 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextDialogueLine()
     {
-        Debug.Log("Button may have been clicked");
         if (lines.Count == 0)
         {
             EndDialogue();

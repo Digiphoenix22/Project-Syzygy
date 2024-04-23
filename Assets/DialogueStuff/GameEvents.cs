@@ -17,7 +17,7 @@ public class GameEvents : MonoBehaviour
     public static event Action onDialogueComplete;
     public static void levelComplete()
     {
-        onLevelComplete?.Invoke();
+       onLevelComplete?.Invoke();
     }
 
     public static void dialogueComplete()

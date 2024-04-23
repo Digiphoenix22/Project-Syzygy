@@ -41,7 +41,6 @@ public class Dialogue
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
-    FadeInOut fade;
 
     [SerializeField] private bool activeOnStart;
     [SerializeField] private float delayTime;
@@ -57,7 +56,6 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Start()
     {
-        fade = GetComponent<FadeInOut>();
         if(activeOnStart) TriggerDialogue();
         else 
         {
@@ -68,7 +66,7 @@ public class DialogueTrigger : MonoBehaviour
     
     public void nextLevelAfterDialogue()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("WorldMap");
     }
 
     IEnumerator delayDialogue(float delay)

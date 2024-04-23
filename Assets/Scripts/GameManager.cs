@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-
+    [SerializeField]
+    FadeInOut fade;
     private int alignedShipsCount = 0;
     public int totalShipsToWin; // Set this in the inspector based on the level
     public GameObject Player;
@@ -24,7 +25,10 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    void Start()
+    {
+        fade.FADE_IN();
+    }
     void Update()
     {
         if (Player == null)
@@ -44,8 +48,24 @@ public class GameManager : MonoBehaviour
         if (alignedShipsCount >= totalShipsToWin)
         {
             Debug.Log("Win Condition Met!");
+            StartCoroutine(LevelComplete());
             // Trigger win state here (e.g., load next level, show win screen, etc.)
         }
+    }
+
+    IEnumerator LevelComplete()
+    {
+        float elapsedTime = 0f;
+        Time.timeScale = 0f;
+        fade.FADE_OUT();
+        while (elapsedTime < 1)
+        {
+            yield return null;
+            elapsedTime += Time.unscaledDeltaTime;
+        }
+        Time.timeScale = 1f;
+        Debug.Log("LOADSCENE");
+        SceneManager.LoadScene("WorldMap");
     }
 
     public void Reset()

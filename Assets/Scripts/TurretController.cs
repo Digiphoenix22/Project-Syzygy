@@ -46,7 +46,6 @@ public class TurretController : MonoBehaviour
                 if (!coolingDown)
                 {
                     {
-                        Debug.Log("fired");
                         audioSource.Play();
                         GameObject bullet = Instantiate(projectile, spawnPos.position, transform.rotation); //spawn projectile
 
