@@ -55,9 +55,14 @@ public class GameManager : MonoBehaviour
 
     IEnumerator LevelComplete()
     {
+        float elapsedTime = 0f;
         Time.timeScale = 0f;
         fade.FADE_OUT();
-        yield return new WaitForSeconds(1);
+        while (elapsedTime < 1)
+        {
+            yield return null;
+            elapsedTime += Time.unscaledDeltaTime;
+        }
         Time.timeScale = 1f;
         Debug.Log("LOADSCENE");
         SceneManager.LoadScene("WorldMap");

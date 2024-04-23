@@ -66,7 +66,7 @@ public class DialogueTrigger : MonoBehaviour
     
     public void nextLevelAfterDialogue()
     {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("WorldMap");
     }
 
     IEnumerator delayDialogue(float delay)
