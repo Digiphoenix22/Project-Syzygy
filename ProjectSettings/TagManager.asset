@@ -11,7 +11,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Background
   - Water
   - UI
   - Logo
@@ -41,11 +41,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
+  - name: BG
+    uniqueID: 760253607
     locked: 0
   - name: Pixel
     uniqueID: 2724599801
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: Base
     uniqueID: 1141301611
