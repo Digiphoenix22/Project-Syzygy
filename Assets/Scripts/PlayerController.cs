@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI; // Add this at the top if it's not already there
 using UnityEngine;
+using TMPro;  // Add this at the top of your script
+
 
 public class PlayerController : MonoBehaviour
 {
@@ -18,6 +21,10 @@ public class PlayerController : MonoBehaviour
     public AudioClip alternateDeathSound; // New field for the alternate sound
 
     public AudioSource audioSource; // SOUNDS YAY!!
+
+    
+    public TextMeshProUGUI healthDisplay;
+
 
 
 
@@ -48,7 +55,13 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         _thrust = initialThrust; // Initialize _thrust with initialThrust value
         thrusterFuel = thrusterFuelMax;
+        UpdateHealthDisplay(); // Initialize health display
     }
+    void UpdateHealthDisplay()
+    {
+        healthDisplay.text = "Health: " + health;
+    }
+
 
     void Update()
     {
@@ -118,7 +131,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKey(KeyCode.Space))
             {
                 _thrust = Mathf.Min(_thrust + Time.deltaTime * initialThrust * 4, maxThrust);
-                thrustMeter.updateMeter(_thrust); //Update the level of the UI meter to show thrust power
+                thrustMeter.UpdateMeter(_thrust); // Corrected method name
             }
 
             // Launch when space is released
@@ -126,11 +139,12 @@ public class PlayerController : MonoBehaviour
             {
                 canLaunch = false;
                 isMidFlight = true;
-                thrustMeter.updateMeter(0); //Reset thrust meter display after launch
+                thrustMeter.UpdateMeter(0); // Corrected method name
                 rb.drag = 0.5f; // Adjust drag for gameplay
                 rb.AddForce(transform.up * _thrust, ForceMode2D.Impulse);
                 _thrust = initialThrust; // Reset _thrust after launch
             }
+
 
             // Smooth rotation control
             float rotation = Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime;
@@ -148,6 +162,7 @@ public class PlayerController : MonoBehaviour
         if (col.gameObject.tag == ("EnemyProjectile"))
         {
             health -= 1;
+            UpdateHealthDisplay();
         }
         if (health <= 0)
         {
