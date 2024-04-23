@@ -31,7 +31,7 @@ public class ColonyShipController : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == ("Wall"))
+        if (collision.gameObject.tag == ("Wall") && rb != null)
         {
             // Reflects the angle of the ship's velocity and simulates a bounce effect
             var speed = lastVelocity.magnitude;

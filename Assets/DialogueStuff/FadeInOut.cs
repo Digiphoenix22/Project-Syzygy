@@ -20,18 +20,31 @@ public class FadeInOut : MonoBehaviour
 
     public void FADE_IN()
     {
-        StartCoroutine(Fading(-0.05f, 0));
+        StartCoroutine(Fading(true));
     }
-    IEnumerator Fading(float fadeVal, float goalVal)
+    IEnumerator Fading(bool fadeIn)
     {
-        while(canvasgroup.alpha != goalVal)
+        if(fadeIn)
         {
-            canvasgroup.alpha += fadeVal;
-            yield return new WaitForSeconds(0.05f);
+            while (canvasgroup.alpha >= 0)
+            {
+                yield return null;
+                canvasgroup.alpha -= Time.unscaledDeltaTime / 4;
+            }   
         }
+        else
+        {
+            while (canvasgroup.alpha <= 1)
+            {
+                yield return null;
+                canvasgroup.alpha += Time.unscaledDeltaTime * 4;
+            }   
+        }
+
+
     }
     public void FADE_OUT()
     {
-        StartCoroutine(Fading(0.05f, 1));
+        StartCoroutine(Fading(false));
     }
 }

@@ -29,7 +29,6 @@ public class PlayerController : MonoBehaviour
     
     //Probably a better way of accessing UI elements than this 
     public ThrustBar thrustMeter; //Thrust bar UI
-    public LaunchButton launchButton; //Launch Button UI
 
     private Vector2 lastVelocity;
     private bool canLaunch = true;
@@ -72,7 +71,6 @@ public class PlayerController : MonoBehaviour
                 canLaunch = true;
                 isMidFlight = false;
                 thrusterFuel = thrusterFuelMax;
-                launchButton.LaunchState(canLaunch); //Update launch button UI
                 cooldownTimer = 0;
             }
         }
@@ -128,7 +126,6 @@ public class PlayerController : MonoBehaviour
             {
                 canLaunch = false;
                 isMidFlight = true;
-                launchButton.LaunchState(canLaunch); //Update launch button UI
                 thrustMeter.updateMeter(0); //Reset thrust meter display after launch
                 rb.drag = 0.5f; // Adjust drag for gameplay
                 rb.AddForce(transform.up * _thrust, ForceMode2D.Impulse);
@@ -148,8 +145,10 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {               
-
-        health -= 1;
+        if (col.gameObject.tag == ("EnemyProjectile"))
+        {
+            health -= 1;
+        }
         if (health <= 0)
         {
             // Randomly decide to play the death sound or the alternate sound
@@ -173,7 +172,7 @@ public class PlayerController : MonoBehaviour
             }
         }
         ExplodeThisGameObject();
-    }
+        }
 
 
         if (col.gameObject.tag == ("Wall"))
@@ -186,6 +185,7 @@ public class PlayerController : MonoBehaviour
             // Corrects ship's rotation to match the new direction
             AdjustRotationAfterCollision(direction);
         }
+
     }
 
     private void ExplodeThisGameObject()
