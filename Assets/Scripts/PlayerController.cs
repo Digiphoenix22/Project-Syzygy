@@ -10,20 +10,19 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public float thrusterFuelMax = 100f; // Maximum fuel for mid-flight adjustments
     private float thrusterFuel; // Current fuel
-    private bool isMidFlight = false; // Is the player in mid-flight?   
+    private bool isMidFlight = false; // Is the player in mid-flight?
 
     public float initialThrust = 5f;
     public float maxThrust = 50f;
     public float rotationSpeed = 100f;
     public float cooldownTime = 4f; // Cooldown time in seconds before the ship can launch again
 
-    public AudioClip deathSound; // Your existing death sound
-    public AudioClip alternateDeathSound; // New field for the alternate sound
-
+    public AudioClip deathSound; // Existing death sound
+    public AudioClip alternateDeathSound; // Alternate death sound
     public AudioClip collisionSound; // Sound to play on collision
-    public AudioSource audioSource; // SOUNDS YAY!!
 
-    
+    public AudioSource audioSource; // Audio source component
+
     public TextMeshProUGUI healthDisplay;
 
 
