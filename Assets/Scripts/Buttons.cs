@@ -67,6 +67,12 @@ public class Buttons : MonoBehaviour
         SceneManager.LoadScene("Main Menu");
     }
 
+    public void Credits()
+    {
+        sfxSource.PlayOneShot(menuNoise);
+        Invoke("CreditsChange", 0.7f);
+    }
+
     private void MapChange()
     {
         SceneManager.LoadScene("WorldMap");
@@ -80,6 +86,11 @@ public class Buttons : MonoBehaviour
     private void StartChange()
     {
         SceneManager.LoadScene("TestScene");
+    }
+
+    private void CreditsChange()
+    {
+        SceneManager.LoadScene("Credits");
     }
 }
 
