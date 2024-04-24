@@ -1,38 +1,69 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections; // Needed for IEnumerator
-using UnityEngine.UI; // Include the UI namespace
+using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.Audio;
+
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject pauseMenuUI; // Assign this in the inspector
-    public Image fadeOverlay; // Assign this in the inspector
-    private bool isFading = false; // To control the fade effect
-    
+    public GameObject pauseMenuUI; // Main pause menu
+    public GameObject optionsMenuUI; // Options menu
+
+    public Image fadeOverlay;
+    public Slider musicVolumeSlider;
+    public Slider sfxVolumeSlider;
+    public AudioMixer musicMixer;
+    public AudioMixer sfxMixer;
+
+    private bool isFading = false;
+
+    void Start()
+    {
+        // Initialize sliders with current mixer settings
+        musicVolumeSlider.onValueChanged.AddListener(SetMusicVolume);
+        sfxVolumeSlider.onValueChanged.AddListener(SetSFXVolume);
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (pauseMenuUI.activeInHierarchy)
+            if (optionsMenuUI.activeInHierarchy)
             {
-                Resume();
+                CloseOptionsMenu();  // First close options if it's open
+            }
+            else if (pauseMenuUI.activeInHierarchy)
+            {
+                Resume();  // If pause menu is open, close it
             }
             else
             {
-                Pause();
+                Pause();  // Open pause menu if no other menu is open
             }
         }
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        musicMixer.SetFloat("MusicVolume", Mathf.Log10(volume) * 20);
+    }
+
+    public void SetSFXVolume(float volume)
+    {
+        sfxMixer.SetFloat("SFXVolume", Mathf.Log10(volume) * 20);
     }
 
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f; // Resume game time
+        optionsMenuUI.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     public void Pause()
     {
         pauseMenuUI.SetActive(true);
-        Time.timeScale = 0f; // Freeze game time
+        Time.timeScale = 0f;
     }
 
     public void LoadMainMenu()
@@ -43,38 +74,34 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    public void OpenOptionsMenu()
+    {
+        optionsMenuUI.SetActive(true);
+        
+    }
+
+    public void CloseOptionsMenu()
+    {
+        optionsMenuUI.SetActive(false);
+
+    }
+
     IEnumerator FadeToMainMenu()
     {
-    // Make sure to resume time when initiating the fade effect
-    Time.timeScale = 1f;
-    isFading = true;
+        Time.timeScale = 1f;
+        isFading = true;
+        float fadeDuration = 0.5f;
+        float currentTime = 0f;
+        fadeOverlay.color = new Color(fadeOverlay.color.r, fadeOverlay.color.g, fadeOverlay.color.b, 0f);
 
-    float fadeDuration = 0.5f;
-    float currentTime = 0f;
+        while (currentTime < fadeDuration)
+        {
+            float alpha = Mathf.Lerp(0f, 1f, currentTime / fadeDuration);
+            fadeOverlay.color = new Color(fadeOverlay.color.r, fadeOverlay.color.g, fadeOverlay.color.b, alpha);
+            currentTime += Time.unscaledDeltaTime;
+            yield return null;
+        }
 
-    // Ensure the overlay is completely opaque before starting the fade effect
-    // in case Time.timeScale was causing issues with coroutine execution.
-    fadeOverlay.color = new Color(fadeOverlay.color.r, fadeOverlay.color.g, fadeOverlay.color.b, 0f);
-
-    // Gradually change the alpha value of the fade overlay from 0 to 1
-    while (currentTime < fadeDuration)
-    {
-        float alpha = Mathf.Lerp(0f, 1f, currentTime / fadeDuration);
-        fadeOverlay.color = new Color(fadeOverlay.color.r, fadeOverlay.color.g, fadeOverlay.color.b, alpha);
-        currentTime += Time.unscaledDeltaTime; // Use unscaledDeltaTime for operations during paused state
-        yield return null; // Wait for the next frame
-    }
-
-    // Load the Main Menu scene after the fade effect completes
-    SceneManager.LoadScene("Main Menu");
-    }
-
-    
-
-    // Add an Options function if you have an options menu
-    public void LoadOptions()
-    {
-        Debug.Log("Load options menu");
-        // Implement options menu functionality here
+        SceneManager.LoadScene("Main Menu");
     }
 }

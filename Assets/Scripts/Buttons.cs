@@ -11,7 +11,7 @@ public class Buttons : MonoBehaviour
     public AudioClip menuNoise;  // Used for click sounds
     public AudioClip hoverSound;  // Used for hover sounds
     public AudioClip menuSong;  // Background music
-
+    public GameObject optionsMenuUI; // Options menu
     void Start()
     {
         musicSource.clip = menuSong;  // Set the music clip
@@ -46,8 +46,15 @@ public class Buttons : MonoBehaviour
     public void Options()
     {
         sfxSource.PlayOneShot(menuNoise);
-        Invoke("OptionsChange", 0.7f);
+        optionsMenuUI.SetActive(true);
     }
+
+    public void CloseOptionsMenu()
+    {
+        optionsMenuUI.SetActive(false);
+
+    }
+
 
     public void WorldMap()
     {
