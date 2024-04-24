@@ -7798,6 +7798,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: ColonyShip 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6734157183401395827, guid: 3b0c99c0a0dd56d49a6ca96232a74c34,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -14.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 6734157183401395827, guid: 3b0c99c0a0dd56d49a6ca96232a74c34,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.86
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9569,12 +9579,12 @@ PrefabInstance:
     - target: {fileID: 1063273996822412303, guid: 3b0c99c0a0dd56d49a6ca96232a74c34,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.12
+      value: 18.06
       objectReference: {fileID: 0}
     - target: {fileID: 1063273996822412303, guid: 3b0c99c0a0dd56d49a6ca96232a74c34,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.74
+      value: 17.2
       objectReference: {fileID: 0}
     - target: {fileID: 1063273996822412303, guid: 3b0c99c0a0dd56d49a6ca96232a74c34,
         type: 3}
