@@ -11324,38 +11324,20 @@ MonoBehaviour:
   dialogue:
     dialogueLines:
     - character:
-        name: Boss
+        name: CAPTAIN
         icon: {fileID: 21300000, guid: 6e8f0ea57c5fb0042a37cd8451623b90, type: 3}
-      line: This is test dialogue
+      line: This place looks different...and there's a floating turret!
       dialogueOptions: []
       DefaultDialogueIndex: 1
     - character:
-        name: Boss
+        name: CAPTAIN
         icon: {fileID: 21300000, guid: 6e8f0ea57c5fb0042a37cd8451623b90, type: 3}
-      line: I am testing dialogue. Try selecting an option
+      line: Nothing I can't handle, though.
       dialogueOptions:
       - option: This
         dialogueIndex: 2
       - option: That
         dialogueIndex: 3
-      DefaultDialogueIndex: 999
-    - character:
-        name: Boss
-        icon: {fileID: 21300000, guid: 6e8f0ea57c5fb0042a37cd8451623b90, type: 3}
-      line: You selected this.
-      dialogueOptions: []
-      DefaultDialogueIndex: 4
-    - character:
-        name: Boss
-        icon: {fileID: 21300000, guid: 6e8f0ea57c5fb0042a37cd8451623b90, type: 3}
-      line: You selected that.
-      dialogueOptions: []
-      DefaultDialogueIndex: 4
-    - character:
-        name: Boss
-        icon: {fileID: 21300000, guid: 6e8f0ea57c5fb0042a37cd8451623b90, type: 3}
-      line: Good stuff man
-      dialogueOptions: []
       DefaultDialogueIndex: 999
   activeOnStart: 1
   delayTime: 1

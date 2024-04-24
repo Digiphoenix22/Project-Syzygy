@@ -13114,13 +13114,13 @@ MonoBehaviour:
     - character:
         name: Boss
         icon: {fileID: 21300000, guid: 6e8f0ea57c5fb0042a37cd8451623b90, type: 3}
-      line: This is test dialogue
+      line: It's insane with all these turrets!
       dialogueOptions: []
       DefaultDialogueIndex: 1
     - character:
         name: Boss
         icon: {fileID: 21300000, guid: 6e8f0ea57c5fb0042a37cd8451623b90, type: 3}
-      line: I am testing dialogue. Try selecting an option
+      line: I hope those other colony ships make it back to base.
       dialogueOptions:
       - option: This
         dialogueIndex: 2
@@ -13130,21 +13130,9 @@ MonoBehaviour:
     - character:
         name: Boss
         icon: {fileID: 21300000, guid: 6e8f0ea57c5fb0042a37cd8451623b90, type: 3}
-      line: You selected this.
+      line: As for this place, I must help the surviving ships!
       dialogueOptions: []
       DefaultDialogueIndex: 4
-    - character:
-        name: Boss
-        icon: {fileID: 21300000, guid: 6e8f0ea57c5fb0042a37cd8451623b90, type: 3}
-      line: You selected that.
-      dialogueOptions: []
-      DefaultDialogueIndex: 4
-    - character:
-        name: Boss
-        icon: {fileID: 21300000, guid: 6e8f0ea57c5fb0042a37cd8451623b90, type: 3}
-      line: Good stuff man
-      dialogueOptions: []
-      DefaultDialogueIndex: 999
   activeOnStart: 1
   delayTime: 1
 --- !u!4 &2036390847

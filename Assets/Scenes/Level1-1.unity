@@ -11357,23 +11357,21 @@ MonoBehaviour:
   dialogue:
     dialogueLines:
     - character:
-        name: Boss
+        name: CAPTAIN
         icon: {fileID: 21300000, guid: 8e6b3f31d84644c42b1daf6e474787f9, type: 3}
-      line: Hey, I'm the captain! We need to retrieve our scattered colony ships!
-        Let me teach ya!
+      line: Per what the BOSS instructed previously...
       dialogueOptions: []
       DefaultDialogueIndex: 1
     - character:
-        name: Boss
+        name: CAPTAIN
         icon: {fileID: 21300000, guid: 8e6b3f31d84644c42b1daf6e474787f9, type: 3}
-      line: Press "space" to launch the ship, and use "A" and "D" to control the
-        trajectory.
+      line: I should be able to link these colony ships...
       dialogueOptions: []
       DefaultDialogueIndex: 2
     - character:
-        name: Boss
+        name: CAPTAIN
         icon: {fileID: 21300000, guid: 8e6b3f31d84644c42b1daf6e474787f9, type: 3}
-      line: 'Good luck! Try to reach the black hole. '
+      line: But will I find a safe exoplanet along the way?
       dialogueOptions: []
       DefaultDialogueIndex: 999
   activeOnStart: 1
