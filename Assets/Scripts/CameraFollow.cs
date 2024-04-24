@@ -8,7 +8,7 @@ public class CameraFollow : MonoBehaviour
     public float smoothSpeed = 0.125f; // Adjust this value to change how smoothly the camera follows the target
     public Vector3 offset; // Offset from the target position (you can adjust this to set how far back the camera should be from the target)
 
-    void Update()//THIS WAS FIXED UPDATE BUT I CHANGED IT BECAUSE MOVEMENT WAS JITTERY. IF SOMETHING BROKE THAT IS WHY
+    void FixedUpdate()//THIS WAS FIXED UPDATE BUT I CHANGED IT BECAUSE MOVEMENT WAS JITTERY. IF SOMETHING BROKE THAT IS WHY
     {
         // Check if target is assigned to avoid NullReferenceException
         if (target == null) return;

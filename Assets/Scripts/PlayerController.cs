@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip deathSound; // Your existing death sound
     public AudioClip alternateDeathSound; // New field for the alternate sound
 
+    public AudioClip collisionSound; // Sound to play on collision
     public AudioSource audioSource; // SOUNDS YAY!!
 
     
@@ -158,7 +159,15 @@ public class PlayerController : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D col)
-    {               
+    {        
+
+
+        // Play collision sound effect
+        if (collisionSound != null && (col.gameObject.tag == "Wall" || col.gameObject.tag == "Obstacle"))
+        {
+            audioSource.PlayOneShot(collisionSound);
+        }
+               
         if (col.gameObject.tag == ("EnemyProjectile"))
         {
             health -= 1;
