@@ -85,7 +85,7 @@ public class Buttons : MonoBehaviour
 
     private void StartChange()
     {
-        SceneManager.LoadScene("TestScene");
+        SceneManager.LoadScene("Level1-1");
     }
 
     private void CreditsChange()

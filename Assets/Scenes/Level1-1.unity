@@ -2464,7 +2464,7 @@ MonoBehaviour:
   cooldownTime: 4
   deathSound: {fileID: 8300000, guid: 0f461dbc01aa9db46947c89e96994455, type: 3}
   alternateDeathSound: {fileID: 8300000, guid: b53bcf3526bfb984a9285d51735c2f7b, type: 3}
-  collisionSound: {fileID: 8300000, guid: 5c4a8497ec6455c428a8b79b951dd7da, type: 3}
+  collisionSound: {fileID: 8300000, guid: d4adf7299c23e254d941c32139a2061a, type: 3}
   audioSource: {fileID: 388092476}
   healthDisplay: {fileID: 1495552576}
   health: 1
@@ -11358,36 +11358,22 @@ MonoBehaviour:
     dialogueLines:
     - character:
         name: Boss
-        icon: {fileID: 21300000, guid: 6e8f0ea57c5fb0042a37cd8451623b90, type: 3}
-      line: This is test dialogue
+        icon: {fileID: 21300000, guid: 8e6b3f31d84644c42b1daf6e474787f9, type: 3}
+      line: Hey, I'm the captain! We need to retrieve our scattered colony ships!
+        Let me teach ya!
       dialogueOptions: []
       DefaultDialogueIndex: 1
     - character:
         name: Boss
-        icon: {fileID: 21300000, guid: 6e8f0ea57c5fb0042a37cd8451623b90, type: 3}
-      line: I am testing dialogue. Try selecting an option
-      dialogueOptions:
-      - option: This
-        dialogueIndex: 2
-      - option: That
-        dialogueIndex: 3
-      DefaultDialogueIndex: 999
-    - character:
-        name: Boss
-        icon: {fileID: 21300000, guid: 6e8f0ea57c5fb0042a37cd8451623b90, type: 3}
-      line: You selected this.
+        icon: {fileID: 21300000, guid: 8e6b3f31d84644c42b1daf6e474787f9, type: 3}
+      line: Press "space" to launch the ship, and use "A" and "D" to control the
+        trajectory.
       dialogueOptions: []
-      DefaultDialogueIndex: 4
+      DefaultDialogueIndex: 2
     - character:
         name: Boss
-        icon: {fileID: 21300000, guid: 6e8f0ea57c5fb0042a37cd8451623b90, type: 3}
-      line: You selected that.
-      dialogueOptions: []
-      DefaultDialogueIndex: 4
-    - character:
-        name: Boss
-        icon: {fileID: 21300000, guid: 6e8f0ea57c5fb0042a37cd8451623b90, type: 3}
-      line: Good stuff man
+        icon: {fileID: 21300000, guid: 8e6b3f31d84644c42b1daf6e474787f9, type: 3}
+      line: 'Good luck! Try to reach the black hole. '
       dialogueOptions: []
       DefaultDialogueIndex: 999
   activeOnStart: 1
